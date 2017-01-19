@@ -1,0 +1,126 @@
+body{
+    font-family: sans-serif;
+}
+header{
+    width: 100%;
+    background-color: #00A3D9;
+    color: white;
+    padding: 22px 12px;
+}
+.logo{
+    display: inline;
+    font-size: 25px;
+    font-weight: 400;
+}
+.weat{
+    font-size: 32px;
+}
+.li-links{
+    list-style-type: none;
+    float: right;
+}
+.li-links > li{
+    display: inline;
+    font-size: 13px;
+    padding: 30px;
+    position: relative;
+    top:-12px;
+}
+.li-opt, .li-opt:visited{
+    text-decoration: none;
+    color: white;
+    transition: 0.7s;
+}
+.li-opt:hover, .li-opt:active{
+    text-decoration: none;
+    color: #444444;
+}
+.art{
+    background-color: #DDDDDD;
+    padding: 50px 70px;
+    margin: 0;
+    height: 850px;
+}
+.info{
+    height: 280px;
+}
+.more-about{
+    height: 470px;
+}
+.dark-hr{
+    border-top-color: #444444;
+}
+.read-but{
+    float: right;
+    border:none;
+    color: white;
+    background-color:#00A3D9;
+    padding: 10px 35px;
+}
+nav{
+    background-color: #444444;
+    padding: 35px;
+    margin: 0 0 0 -15px;
+    color: white;
+    height: 850px;
+}
+.pos{
+    position: relative;
+    top:-8px;
+}
+.nav-lists{
+    height: 340px;
+}
+.hr-light{
+    margin:  0;
+    border-top-color: #DDDDDD;
+}
+.city{
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+#weather{
+    font-weight: 700;
+}
+.about-small{
+    visibility: hidden;
+    border-right: 1px solid;
+}
+footer{
+    visibility: hidden;
+    background-color: #444444;
+    padding: 35px;
+    width: 100%;
+    margin: 0;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+.plus{
+    background-color:deeppink;
+}
+.minus{
+    background-color: aqua;
+}
+.zero{
+    background-color: #DDDDDD;
+}
+@media only screen and (max-device-width: 780px) {
+    .about-app{
+        visibility: hidden;
+    }
+    .change{
+        width: 20%;
+        display: inline-block;
+        float:left;
+        text-align: center;
+    }
+    .visible{
+        visibility: visible;
+    }
+    .unvisible{
+        visibility: hidden;
+    }
+}

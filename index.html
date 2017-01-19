@@ -1,0 +1,74 @@
+<head >
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body ng-app="weatApp" ng-controller="weatCtrl">
+    <header>
+        <div>
+        <h1 class="logo">
+            <b class="weat">WEATHER</b><br> IN REAL TIME
+        </h1>
+        </div>
+        <div>
+            <ul class="li-links">
+                <li><a class="li-opt" href="#">Home</a></li>
+                <li><a class="li-opt" href="#">About</a></li>
+                <li><a class="li-opt" href="#">Contacts</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="row">
+    <article class="col-md-8" >
+       <div class="art" ng-class="changeColor">
+        <div class="info" ng-view>
+            <p class="city-in"> WEATHER IN:<span id="weather" ng-cloak>{{sendCity}}</span></p>
+                <hr class="dark-hr">
+            <p> Tempeture:<span id="temp-get" ng-cloak>{{temp}}</span></p>
+            <p> Humidaty:<span id="humi-get" ng-cloak>{{humi}}</span></p>
+            <p> Wind:<span id="wind-get" ng-cloak>{{wind}}</span></p>
+        </div>
+        <div class="more-about">
+            <p> MORE ABOUT THE WEATHER</p>
+                <hr class="dark-hr">
+            <div class="row">
+                <div class="col-md-6">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis consectetur finibus. Maecenas scelerisque sapien erat, id viverra libero porta a. Aenean ut aliquam ligula. Vivamus ultricies pellentesque lorem sit amet ullamcorper. Praesent ultrices, magna a vestibulum hendrerit, odio tortor luctus est, id volutpat risus purus nec lacus. Etiam vel vulputate nisi. Morbi sed porta est. Duis in enim elit. Nunc mollis, felis at pharetra commodo, ante augue dapibus risus, ac finibus diam turpis vitae purus. Curabitur vestibulum sapien sed mauris congue, in blandit lectus suscipit. Proin vel congue lorem, non sagittis dui. Integer nec condimentum velit. Morbi fringilla viverra massa quis faucibus. Duis dui nisi, rhoncus in nunc id, ornare faucibus magna. Vestibulum sit amet pellentesque nisi.
+                </div>
+                <div class="col-md-6">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis consectetur finibus. Maecenas scelerisque sapien erat, id viverra libero porta a. Aenean ut aliquam ligula. Vivamus ultricies pellentesque lorem sit amet ullamcorper. Praesent ultrices, magna a vestibulum hendrerit, odio tortor luctus est, id volutpat risus purus nec lacus. Etiam vel vulputate nisi. Morbi sed porta est. Duis in enim elit. Nunc mollis, felis at pharetra commodo, ante augue dapibus risus, ac finibus diam turpis vitae purus. Curabitur vestibulum sapien sed mauris congue, in blandit lectus suscipit. Proin vel congue lorem, non sagittis dui. Integer nec condimentum velit. Morbi fringilla viverra massa quis faucibus. Duis dui nisi, rhoncus in nunc id, ornare faucibus magna. Vestibulum sit amet pellentesque nisi.
+                </div>     
+            </div>
+            <button class="read-but"> READ MORE</button>
+            <div><button class="read-but about-small visible"> ABOUT THE APP</button></div>
+        </div>
+        </div>
+    </article>
+    <nav class="col-md-4 pos unvisible">
+        <ul class="nav nav-lists">
+            <li class="nav-item"><a href="#main" ng-click="getCity(cityArr[0])" class="city nav-link active">Kaunas</a></li><hr class="hr-light">
+            <li class="nav-item"><a href="#main" ng-click="getCity(cityArr[1])" class="city nav-link">Vilnius</a></li><hr class="hr-light">
+            <li class="nav-item"><a href="#main" ng-click="getCity(cityArr[2])" class="city nav-link">Klaipeda</a></li><hr class="hr-light">
+            <li class="nav-item"><a href="#main" ng-click="getCity(cityArr[3])" class="city nav-link">Siauliai</a></li><hr class="hr-light">
+            <li class="nav-item"><a href="#main" ng-click="getCity(cityArr[4])" class="city nav-link">Panevezys</a></li><hr class="hr-light">
+        </ul>
+        <div>
+            <h4> About the app</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis consectetur finibus. Maecenas scelerisque sapien erat, id viverra libero porta a. Aenean ut aliquam ligula. Vivamus ultricies pellentesque lorem sit amet ullamcorper. Praesent ultrices, magna a vestibulum hendrerit, odio tortor luctus est, id volutpat risus purus nec lacus. Etiam vel vulputate nisi. Morbi sed porta est. Duis in enim elit. Nunc mollis, felis at pharetra commodo, ante augue dapibus risus, ac finibus diam turpis vitae purus. Curabitur vestibulum sapien sed mauris congue, in blandit lectus suscipit. Proin vel congue lorem, non sagittis dui. Integer nec condimentum velit. Morbi fringilla viverra massa quis faucibus. Duis dui nisi, rhoncus in nunc id, ornare faucibus magna. Vestibulum sit amet pellentesque nisi.</p>
+        </div>
+    </nav>
+    </div>
+    <footer class="visible">
+        <ul class="nav nav-lists">
+            <li class="nav-item change"><a href="#main" ng-click="getCity(cityArr[0])" class="city nav-link active">Kaunas</a></li>
+            <li class="nav-item change"><a href="#main" ng-click="getCity(cityArr[1])" class="city nav-link">Vilnius</a></li>
+            <li class="nav-item change"><a href="#main" ng-click="getCity(cityArr[2])" class="city nav-link">Klaipeda</a></li>
+            <li class="nav-item change"><a href="#main" ng-click="getCity(cityArr[3])" class="city nav-link">Siauliai</a></li>
+            <li class="nav-item change"><a href="#main" ng-click="getCity(cityArr[4])" class="city nav-link">Panevezys</a></li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+    
+</body>
